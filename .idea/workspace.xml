@@ -2,12 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0dac8824-0605-45ec-b970-4941a2f9202d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/machine/Dir.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/machine/Tank.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/machine/Bullet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/machine/T.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/machine/T.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/machine/T.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/machine/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/machine/Tank.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/machine/Tank.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/machine/TankFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/machine/TankFrame.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/machine/T.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/machine/T.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/org/machine/TankFrame$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/machine/TankFrame$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/org/machine/TankFrame$MyKeyAdapter.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/machine/TankFrame$MyKeyAdapter.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/org/machine/TankFrame.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/machine/TankFrame.class" afterDir="false" />
@@ -47,12 +46,13 @@
   <component name="ProjectId" id="1Tdq6fOBI0YdFC9bqbGCYmmRiR2" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="project.structure.last.edited" value="Global Libraries" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.23765786" />
-    <property name="settings.editor.selected.configurable" value="configurable.group.appearance" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -66,7 +66,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.T">
+  <component name="RunManager" selected="Application.Main">
     <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.machine.App" />
       <module name="Tank" />
@@ -80,8 +80,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="T" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="org.machine.T" />
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.machine.Main" />
       <module name="Tank" />
       <extension name="coverage">
         <pattern>
@@ -108,7 +108,7 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.T" />
+        <item itemvalue="Application.Main" />
         <item itemvalue="Application.TankFrame" />
         <item itemvalue="Application.App" />
       </list>
@@ -125,6 +125,7 @@
       <option name="presentableId" value="Default" />
       <updated>1573800145226</updated>
       <workItem from="1573800146559" duration="13528000" />
+      <workItem from="1573868893935" duration="4524000" />
     </task>
     <task id="LOCAL-00001" summary="坦克大战一期">
       <created>1573810075315</created>
@@ -133,7 +134,14 @@
       <option name="project" value="LOCAL" />
       <updated>1573810075315</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="抽象化Tank类">
+      <created>1573868952064</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1573868952064</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -144,7 +152,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
@@ -152,6 +162,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="坦克大战一期" />
-    <option name="LAST_COMMIT_MESSAGE" value="坦克大战一期" />
+    <MESSAGE value="抽象化Tank类" />
+    <option name="LAST_COMMIT_MESSAGE" value="抽象化Tank类" />
   </component>
 </project>

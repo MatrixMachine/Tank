@@ -5,7 +5,16 @@ import java.awt.*;
 public class Tank {
     private int x, y;
     private Dir dir;
-    final int speed = 10;
+    final int SPEED = 5;
+    private boolean moving;
+
+    public boolean isMoving() {
+        return moving;
+    }
+
+    public void setMoving(boolean moving) {
+        this.moving = moving;
+    }
 
     public Tank(){}
 
@@ -39,26 +48,34 @@ public class Tank {
         this.dir = dir;
     }
 
-    public int getSpeed() {
-        return speed;
+    public int getSPEED() {
+        return SPEED;
     }
 
     public void paint(Graphics g) {
         g.fillRect(x,y,50,50);
-        switch (dir){
+        move();
+        }
+
+    private void move() {
+        if (!moving) {return;}
+        else {
+        switch (dir) {
             case LEFT:
-                x -= speed;
+                x -= SPEED;
                 break;
             case UP:
-                y -= speed;
+                y -= SPEED;
                 break;
             case RIGHT:
-                x += speed;
+                x += SPEED;
                 break;
             case DOWN:
-                y += speed;
+                y += SPEED;
                 break;
-            default:break;
+            default:
+                break;
+            }
         }
     }
 }

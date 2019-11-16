@@ -9,6 +9,7 @@ import java.awt.event.WindowEvent;
 
 public class TankFrame extends Frame {
     Tank myTank = new Tank(200,200,Dir.LEFT);
+    Bullet bullet = new Bullet(Dir.LEFT,200,200);
     private static boolean bL = false;
     private static boolean bR = false;
     private static boolean bU = false;
@@ -31,6 +32,7 @@ public class TankFrame extends Frame {
     @Override
     public void paint(Graphics g) {
         myTank.paint(g);
+        bullet.paint(g);
     }
 
     class MyKeyAdapter extends KeyAdapter{
@@ -75,13 +77,18 @@ public class TankFrame extends Frame {
                     default:
                         break;
             }
+            setMainTankDir();
         }
 
         private void setMainTankDir(){
-            if (bL) myTank.setDir(Dir.LEFT);
-            if (bU) myTank.setDir(Dir.UP);
-            if (bR) myTank.setDir(Dir.RIGHT);
-            if (bD) myTank.setDir(Dir.DOWN);
+            if (!bL && !bU && !bR && !bD) {myTank.setMoving(false);}
+            else {
+                myTank.setMoving(true);
+                if (bL) {myTank.setDir(Dir.LEFT);}
+                if (bU) {myTank.setDir(Dir.UP);}
+                if (bR) {myTank.setDir(Dir.RIGHT);}
+                if (bD) {myTank.setDir(Dir.DOWN);}
+            }
         }
     }
 }
