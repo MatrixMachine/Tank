@@ -8,12 +8,11 @@ import java.awt.event.WindowEvent;
 
 
 public class TankFrame extends Frame {
-    private static Integer x = 200, y = 200;
+    Tank myTank = new Tank(200,200,Dir.LEFT);
     private static boolean bL = false;
     private static boolean bR = false;
     private static boolean bU = false;
     private static boolean bD = false;
-
 
     public TankFrame(){
           this.setSize(480,640);
@@ -31,16 +30,7 @@ public class TankFrame extends Frame {
 
     @Override
     public void paint(Graphics g) {
-        g.fillRect(x,y,50,50);
-        if (bL == true){
-            x -= 10;
-        }if (bR == true){
-            x += 10;
-        }if(bU == true){
-            y -= 10;
-        }if (bD == true){
-            y +=10;
-        }
+        myTank.paint(g);
     }
 
     class MyKeyAdapter extends KeyAdapter{
@@ -51,17 +41,19 @@ public class TankFrame extends Frame {
                 case KeyEvent.VK_LEFT:
                     bL = true;
                     break;
-                case KeyEvent.VK_RIGHT:
-                    bR = true;
-                    break;
                 case KeyEvent.VK_UP:
                     bU = true;
+                    break;
+                case KeyEvent.VK_RIGHT:
+                    bR = true;
                     break;
                 case KeyEvent.VK_DOWN:
                     bD = true;
                     break;
-                default:break;
+                default:
+                    break;
             }
+            setMainTankDir();
         }
 
         @Override
@@ -71,11 +63,11 @@ public class TankFrame extends Frame {
                     case KeyEvent.VK_LEFT:
                         bL = false;
                         break;
-                    case KeyEvent.VK_RIGHT:
-                        bR = false;
-                        break;
                     case KeyEvent.VK_UP:
                         bU = false;
+                        break;
+                    case KeyEvent.VK_RIGHT:
+                        bR = false;
                         break;
                     case KeyEvent.VK_DOWN:
                         bD = false;
@@ -83,6 +75,13 @@ public class TankFrame extends Frame {
                     default:
                         break;
             }
+        }
+
+        private void setMainTankDir(){
+            if (bL) myTank.setDir(Dir.LEFT);
+            if (bU) myTank.setDir(Dir.UP);
+            if (bR) myTank.setDir(Dir.RIGHT);
+            if (bD) myTank.setDir(Dir.DOWN);
         }
     }
 }
